@@ -3,8 +3,8 @@ package com.alfredo.springboot.webapp.springboot_web.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.alfredo.springboot.webapp.springboot_web.models.User;
 import com.alfredo.springboot.webapp.springboot_web.models.Dto.UserDto;
+import com.alfredo.springboot.webapp.springboot_web.models.User;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,10 +22,10 @@ public class UserRestController {
         User user = new User("Alfredo", "Fiestas");
         UserDto userDto=new UserDto();
         userDto.setUser(user);
-        userDto.setTitulo("Bienvenido al Mundo Spring Framework con Thymeleaf esto sale con Dto, Objeto de Transferencia de Datos");
+        userDto.setTitulo("Spring Framework con Thymeleaf esto sale con Dto, Objeto de Transferencia de Datos");
 
         return userDto;
-        }
+    }
 
     @GetMapping("/details2-map")
     //@ResponseBody //indica que el valor devuelto por el metodo sera el cuerpo de la respuesta HTTP, respuesta tipo JSON o XML 
