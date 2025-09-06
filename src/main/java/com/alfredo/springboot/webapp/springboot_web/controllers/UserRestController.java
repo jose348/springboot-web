@@ -22,7 +22,8 @@ public class UserRestController {
         User user = new User("Alfredo", "Fiestas");
         UserDto userDto=new UserDto();
         userDto.setUser(user);
-        userDto.setTitulo("Bienvenido al Mundo Spring Framework con Thymeleaf esto sale con Dto,");
+        userDto.setTitulo("Bienvenido al Mundo Spring Framework con Thymeleaf esto sale con Dto, Objeto de Transferencia de Datos");
+
         return userDto;
         }
 
