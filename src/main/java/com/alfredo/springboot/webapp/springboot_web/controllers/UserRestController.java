@@ -18,7 +18,7 @@ public class UserRestController {
     @GetMapping("/details2")
     public UserDto details() {
 
-        User user = new User("Alfredo", "Fiestas","askdjf@asdf5a2");
+        User user = new User("Alfredo", "Fiestas");
         UserDto userDto=new UserDto();
         userDto.setUser(user);
         userDto.setTitulo("Spring Framework con Thymeleaf esto sale con Dto, Objeto de Transferencia de Datos");
@@ -28,10 +28,10 @@ public class UserRestController {
 
     @GetMapping("listUser")
     public List<User> lista(){
-        User u=new User("Jose","Fiestas","as@asd");
-        User u1=new User("Mario","Fiestas", "asas@213");
-        User u2=new User("Veronica","Fiestas","dwda5@654");
-        User u3=new User("Liam","Fiestas","454@as231");
+        User u=new User("Jose","Fiestas");
+        User u1=new User("Mario","Fiestas");
+        User u2=new User("Veronica","Fiestas");
+        User u3=new User("Liam","Fiestas");
 
        //List<User> users=new ArrayList<>();
         //users.add(u);
@@ -48,7 +48,7 @@ public class UserRestController {
     //@ResponseBody //indica que el valor devuelto por el metodo sera el cuerpo de la respuesta HTTP, respuesta tipo JSON o XML 
     public Map<String, Object> detailsMap() {
 
-        User user = new User("Alfredo", "Fiestas","sdf@sdfsd");
+        User user = new User("Alfredo", "Fiestas");
          Map<String, Object> body =new HashMap<>();
          body.put("title", "Bienvenido al Mundo Spring Framework con Thymeleaf");
             body.put("user", user);
