@@ -1,17 +1,15 @@
 package com.alfredo.springboot.webapp.springboot_web.controllers;
 
 import com.alfredo.springboot.webapp.springboot_web.models.Dto.ParamDto;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.alfredo.springboot.webapp.springboot_web.models.User;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
    @RequestMapping("/api/var")
-public class pathRequest {
+public class pathVariable {
 
       @GetMapping("/baz/{message}")
       //@PathVariable para enviar por ruta y multiples párametros
@@ -28,4 +26,12 @@ public class pathRequest {
             json.put("id",id);
          return json;
       }
+
+        @PostMapping("/create")
+        public User create(@RequestBody User user){
+        user.setName(user.getName().toUpperCase());
+
+        return user;
+      }
+
 }
